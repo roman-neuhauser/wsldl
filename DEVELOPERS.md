@@ -1,10 +1,8 @@
 # Developers Document
 
-## 🛠How-to-Build
+## How-to-Build
 
-### Windows
-
-#### Visual Studio or Build Tools 2017+
+### Visual Studio or Build Tools 2017+
 
 Use `Developer Command Prompt for Visual Studio` or run these in the Windows Command Prompt
 ```cmd
@@ -30,25 +28,18 @@ cl /nologo /O2 /W4 /WX /Ob2 /Oi /Oy /Gs- /GF /Gy /Tc main.c /Fe:%YourDistroName%
 ```
 
 ### MinGW
-Install x86_64 version of MSYS2(https://www.msys2.org).
+This software can be built using MingW on either Windows (MSYS2) or GNU/Linux.
+In MSYS2, you'll need to use the "MingW" variant of the terminal, or prepend
+``/mingw64`` to ``$PATH`` yourself.
 
-Run these commands in msys shell
 ```bash
-$ pacman -S mingw-w64-x86_64-toolchain # install tool chain
-$ gcc -std=c99 --static -o Launcher.exe main.c -lshlwapi # compile main.c
+$ pacman -S mingw-w64-x86_64-gcc
+$ make Launcher.exe
 ```
 
-Optionally, to add an icon to the exe, create and link a resource with
+To build the launcher with an embedded icon, use eg.
 ```bash
-$ YourDistroName=Fedora
-$ windres res/$YourDistroName/res.rc res.o # compile resource
-$ gcc -std=c99 --static -o ${YourDistroName}.exe main.c res.o -lshlwapi # compile main.c
+$ make Fedora.exe
 ```
 
-### Linux (cross compile)
-Install mingw-w64 toolchain include gcc-mingw-w64-x86-64.
-
-Run this command in shell
-```bash
- $ x86_64-w64-mingw32-gcc -std=c99 --static -o Launcher.exe -lshlwapi main.c # compile main.c
-```
+See the ``res`` directory for details.
