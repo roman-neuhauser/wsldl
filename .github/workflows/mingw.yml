@@ -16,51 +16,6 @@ jobs:
       run: |
         make
 
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2-preview
       with:
-        name: Launcher.exe
-        path: Launcher.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Alpine.exe
-        path: Alpine.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Arch.exe
-        path: Arch.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Artix.exe
-        path: Artix.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: CentOS.exe
-        path: CentOS.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Clear.exe
-        path: Clear.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Debian.exe
-        path: Debian.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Fedora.exe
-        path: Fedora.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Gentoo.exe
-        path: Gentoo.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Ubuntu.exe
-        path: Ubuntu.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Void.exe
-        path: Void.exe
-    - uses: actions/upload-artifact@v1
-      with:
-        name: openSUSE.exe
-        path: openSUSE.exe
+        path: *.exe
