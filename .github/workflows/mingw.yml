@@ -3,7 +3,8 @@ name: Mingw-w64 Cross CI
 on:
   pull_request:
   push:
-    tags-ignore: v*
+    tags-ignore:
+      - v*
 
 jobs:
   build:
