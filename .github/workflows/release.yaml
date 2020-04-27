@@ -30,7 +30,6 @@ jobs:
         prerelease: false
 
     - name: Upload Launcher.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +40,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Alpine.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,7 +50,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Arch.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +60,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Artix.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -74,7 +70,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload CentOS.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -85,7 +80,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Clear.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -96,7 +90,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Debian.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -107,7 +100,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Fedora.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -118,7 +110,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Gentoo.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -129,7 +120,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Ubuntu.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -140,7 +130,6 @@ jobs:
         asset_content_type: application/octet-stream
 
     - name: Upload Void.exe
-      id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
