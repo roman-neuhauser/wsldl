@@ -1,6 +1,9 @@
 name: Mingw-w64 Cross CI
 
-on: [push]
+on:
+  pull_request:
+  push:
+    tags-ignore: v*
 
 jobs:
   build:
@@ -15,64 +18,3 @@ jobs:
     - name: make
       run: |
         make
-
-    - uses: actions/upload-artifact@v1
-      name: preserve Launcher.exe
-      with:
-        name: Launcher.exe
-        path: Launcher.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Alpine.exe
-      with:
-        name: Alpine.exe
-        path: Alpine.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Arch.exe
-      with:
-        name: Arch.exe
-        path: Arch.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Artix.exe
-      with:
-        name: Artix.exe
-        path: Artix.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve CentOS.exe
-      with:
-        name: CentOS.exe
-        path: CentOS.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Clear.exe
-      with:
-        name: Clear.exe
-        path: Clear.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Debian.exe
-      with:
-        name: Debian.exe
-        path: Debian.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Fedora.exe
-      with:
-        name: Fedora.exe
-        path: Fedora.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Gentoo.exe
-      with:
-        name: Gentoo.exe
-        path: Gentoo.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Ubuntu.exe
-      with:
-        name: Ubuntu.exe
-        path: Ubuntu.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve Void.exe
-      with:
-        name: Void.exe
-        path: Void.exe
-    - uses: actions/upload-artifact@v1
-      name: preserve openSUSE.exe
-      with:
-        name: openSUSE.exe
-        path: openSUSE.exe
